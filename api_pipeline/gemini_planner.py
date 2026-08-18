@@ -7,6 +7,7 @@ load_dotenv()
 
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
+
 def generate_tour_itinerary(nationality, age, interests, duration_days):
     """
     유저의 인적사항과 취향을 받아 Gemini로부터 규격화된 여행 일정(JSON)을 생성합니다.
@@ -42,25 +43,23 @@ def generate_tour_itinerary(nationality, age, interests, duration_days):
     """
 
     try:
-        chat = client.chats.create(model='gemini-3.6-flash')
+        chat = client.chats.create(model="gemini-3.6-flash")
         response = chat.send_message(prompt)
-        
-        # JSON 파싱
+
         cleaned_text = response.text.strip().replace("```json", "").replace("```", "")
         itinerary_data = json.loads(cleaned_text)
         return itinerary_data
 
     except Exception as e:
-        print("❌ Error generating itinerary:", e)
+        print("Error generating itinerary:", e)
         return None
 
-# 테스트 실행
+
 if __name__ == "__main__":
-    # 라이언(Ryan) 미국인 대학생 시나리오 테스트
     result = generate_tour_itinerary(
-        nationality="American", 
-        age="20s", 
-        interests="History, Palace, Walking minimalized", 
-        duration_days=1
+        nationality="American",
+        age="20s",
+        interests="History, Palace, Walking minimalized",
+        duration_days=1,
     )
     print(json.dumps(result, indent=2, ensure_ascii=False))
