@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap');
+
+.main .block-container{
+    padding: 2rem;
+    max-width: 95%;
+}
+
+.step-number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin: 5px auto;
+
+    color: #547e5d;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 1;
+    background-color: #d6eeda;
+}
+.step-card {
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #fddd737c;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    justify-content: center;
+    min-height: 82px;
+    padding: 0.75rem 0.5rem;
+    margin: 30% auto;
+}
+.step-label {
+    color: #333333;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+div[data-testid="stVerticalBlock"] div{
+    align-items: center;
+    text-align: center;
+}
+
+div[data-testid="stFormSubmitButton"] button{
+    border-radius: 20px;
+    font-weight: 900;
+    border: none;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+div[data-testid="stHeading"] h1{
+    font-family: 'Klee One', 'Nanum Brush Script', cursive;
+    font-size: 4rem;
+    font-weight: 100;
+    text-align: center;
+    white-space: nowrap;
+    margin-top: 30%;
+}
+
+@media (max-width: 600px) {
+    div[data-testid="stHeading"] h1 {
+        font-size: 2.5rem;
+    }
+}
+
+div[data-testid="stHeading"] h3{
+    color: #8b8b8b;
+    font-size: 1.1rem;
+    font-weight: 100;
+    text-align: center;
+}
+div[data-testid="stButton"] button[data-testid="stBaseButton-primary"]{
+    background-color: #2f6e52;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 0.65rem 5rem;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    margin-top: 15%;
+}
+
+div[data-testid="stButton"] button[data-testid="stBaseButton-primary"]:hover{
+    background-color: #24563f;
+    border-color: #24563f;
+}
+.block-container {
+    padding: 1.5rem 3rem 3rem;
+}
+.toolbar{
+    align-items: center;
+    background: #ffffff;
+    border-bottom: 1px solid #e9e9e9;
+    display: flex;
+    justify-content: space-between;
+    margin: -1.5rem -3rem 0;
+    padding: 1rem 3rem;
+}
+.toolbar-title{
+    color: #222222;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.toolbar-subtitle{
+    color: #777777;
+    font-size: 0.9rem;
+}
