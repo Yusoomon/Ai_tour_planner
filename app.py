@@ -4,7 +4,7 @@ import datetime
 from streamlit_folium import st_folium
 from api_pipeline.pipe import pipe
 from folium import plugins
-
+from streamlit_option_menu import option_menu
 
 def init_app():
     st.set_page_config(page_title="AI Travel Planner", page_icon="✈️", layout="wide")
@@ -24,9 +24,19 @@ def init_app():
 
 
 def render_onboarding():
+    st.set_page_config(
+        layout="centered",
+        initial_sidebar_state="collapsed"
+    )
     st.title("Easy plan, Cozy vacay")
     st.subheader("Welcome! Tell us just a little bit about you")
 
+    with st.sidebar:
+        choice=option_menu("menu", ["Page1", "Page2", "Page3"],
+                           icons=['house', 'kanban', 'bi bi-robot'],
+                           menu_icon="app-indicator", default_index=0
+                )
+    
     _, col_center, _ = st.columns([1, 5, 1])
     with col_center:
         with st.container(border=True):
