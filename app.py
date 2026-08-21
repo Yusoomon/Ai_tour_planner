@@ -6,6 +6,7 @@ from streamlit_folium import st_folium
 from api_pipeline.pipe import pipe
 from folium import plugins
 
+from common import initialize_page
 
 # ============================================================
 # 8단계 유저 플로우 (Layout A "맵 퍼스트" 팔레트 유지)
@@ -993,3 +994,49 @@ def main():
 
 if __name__ == "__main__":
     main()
+initialize_page(layout="centered")
+with st.container():
+    st.title("Easy plan, Cozy vacay")
+    st.subheader("Optimize your travel plan with AI")
+
+    with st.container():
+        co1, col2, col3, col4 = st.columns([1, 1, 1, 1])
+        with co1:
+            st.markdown(
+                """
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Profile</div>
+                </div>
+                """, unsafe_allow_html=True,
+            )
+        with col2:
+            st.markdown(
+                """
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Preferences</div>
+                </div>
+                """, unsafe_allow_html=True,
+            )
+        with col3:
+            st.markdown(
+                """
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Prototype</div>
+                </div>
+                """, unsafe_allow_html=True,
+            )
+        with col4:
+            st.markdown(
+                """
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Finalize</div>
+                </div>
+                """, unsafe_allow_html=True,
+            )
+
+    if st.button("Start Planning 👉", type="primary"):
+        st.switch_page("pages/2_Profile.py")
