@@ -3,6 +3,7 @@ import streamlit as st
 from common import initialize_page
 
 initialize_page(layout="centered")
+
 with st.container():
     st.title("Easy plan, Cozy vacay")
     st.subheader("Optimize your travel plan with AI")
@@ -46,5 +47,5 @@ with st.container():
                 """, unsafe_allow_html=True,
             )
 
-    if st.button("Start Planning 👉", type="primary"):
+    if st.button("Start Planning 👉", type="primary", use_container_width=True):
         st.switch_page("pages/2_Profile.py")

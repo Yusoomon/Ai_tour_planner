@@ -8,3 +8,6 @@ font="verdana"
 [server]
 port=8501
 headless=true
+
+[client]
+showSidebarNavigation=false
