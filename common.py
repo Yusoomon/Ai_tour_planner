@@ -9,6 +9,7 @@ def initialize_page(layout="wide"):
     )
     load_css()
     header()
+    footer()
 
     defaults = {
         "user_profile": {},
@@ -20,6 +21,16 @@ def initialize_page(layout="wide"):
     for key, value in defaults.items():
         if key not in st.session_state:
             st.session_state[key] = value
+
+    
+
+def footer():
+    st.markdown(
+    """
+    <div class="custom-footer">
+        © 2026 Yusoomon, All rights reserved. Designed by MinHyeok
+    </div>
+    """, unsafe_allow_html=True)
 
 def header():
     st.markdown(
@@ -41,7 +52,6 @@ def header():
             </a>
             <span style='margin: 0 75px 0 auto; font-size: 15px; font-weight: 100;'>Free App</span>
         </div>
-        <div style="margin-top: 60px;"></div>
         """, unsafe_allow_html=True,
     )
 
