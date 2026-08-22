@@ -267,8 +267,30 @@ div[data-testid="stCheckbox"] label {
 .stMainBlockContainer:has(.route-page-marker) [data-testid="stVerticalBlockBorderWrapper"] {
     background: var(--white);
     border-color: #e7e3da;
-    height: 230px;
+    min-height: 0;
+    height: auto;
     box-sizing: border-box;
+}
+
+.route-type {
+    color: #222222;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-top: 0.25rem;
+}
+
+.route-details {
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    margin-top: 0.3rem;
+    white-space: nowrap;
+}
+
+.route-summary {
+    color: #333333;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 0.75rem;
 }
 
 [data-testid="stVerticalBlockBorderWrapper"]:has(.selected-route-marker) {
