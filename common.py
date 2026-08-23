@@ -9,6 +9,7 @@ def initialize_page(layout="wide"):
     )
     load_css()
     header()
+    ui_hide()
 
     defaults = {
         "user_profile": {},
@@ -21,7 +22,35 @@ def initialize_page(layout="wide"):
         if key not in st.session_state:
             st.session_state[key] = value
 
-    
+def ui_hide():
+    hide_all_ui = """
+        <style>
+        header, [data-testid="stHeader"] {
+            visibility: hidden !important;
+            height: 0px !important;
+            padding: 0px !important;
+        }
+        
+        [data-testid="stToolbar"] {
+            display: none !important;
+        }
+        
+        #MainMenu {
+            visibility: hidden !important;
+            display: none !important;
+        }
+        
+        footer {
+            visibility: hidden !important;
+            display: none !important;
+        }
+        
+        .block-container {
+            padding-top: 2rem !important;
+        }
+        </style>
+    """
+    st.markdown(hide_all_ui, unsafe_allow_html=True)
 
 def footer():
     st.markdown(
