@@ -43,13 +43,14 @@ def header():
             display: flex;
             align-items: center;
             box-sizing: border-box;
+            height: 3rem;
             z-index: 999999;
         ">
             <a href="app.py" target="_self" class="brand">
             <img src='https://cdn-icons-png.flaticon.com/512/201/201623.png' alt='Logo' style='height: 30px; margin-right: 10px;'>
             <h1 style='margin: 0; font-size: 20px;'>AI Tour Planner</h1>
             </a>
-            <span style='margin: 0 60px 0 auto; font-size: 13px; font-weight: 100;'>Free App</span>
+            <span style='margin: 0 80px 0 auto; font-size: 13px; font-weight: 100;'>Free App</span>
         </div>
         """, unsafe_allow_html=True,
     )

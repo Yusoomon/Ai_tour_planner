@@ -2,18 +2,20 @@
 
 html, body{
     height: 100%;
+    overflow-x: hidden;
 }
 
 .custom-footer{
-    border-top: solid 1px #000000;
-    color:var(--text-muted);
-    background-color: var(--white);
+    color:#000000;
+    background-color: #dadada6f;
     width: 100vw;
-    height: 3rem;
+    height: 2.25rem;
     align-content: center;
     font-style: italic;
+    font-size: 0.875rem;
     box-sizing: border-box;
     margin-left: calc(50% - 50vw);
+    margin-bottom: -1rem;
 }
 
 [data-testid="stDateInputField"]{
@@ -22,6 +24,8 @@ html, body{
 
 [data-testid="stMain"]{
     margin-top:2.25rem;
+    height: calc(100vh - 32px);
+    overflow-x: hidden;
 }
 
 :root {
@@ -36,7 +40,7 @@ html, body{
 }
 
 .main .block-container {
-    padding: 1rem 2rem;
+    padding: 0rem 2rem;
     max-width: 95%;
 }
 
@@ -129,18 +133,13 @@ div[data-testid="stButton"] button[data-testid="stBaseButton-secondary"] {
     padding: 0.55rem 1rem;
 }
 div[data-testid="stButton"] button[kind="tertiary"] {
-    width: auto;
+    width: 60px;
     position: fixed;
-    top: 21px;
+    top: 0;
     right: 25px;
     z-index: 1000000;
-    padding: 0;
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 1;
     min-height: 0;
-    height: 28px;
+    margin-top: 0.75rem;
 }
 button {
     background-color: var(--white);
@@ -161,22 +160,22 @@ div[data-testid="stButton"] button[data-testid="stBaseButton-secondary"]:hover {
 }
 div[data-testid="stButton"] button[kind="tertiary"]:hover,
 div[data-testid="stButton"] button[data-testid="stBaseButton-tertiary"]:hover {
-    background-color: #bcbcbc;
-    border-radius: 20%;
+    background-color: #e7e7e756;
+    border-radius: 10%;
 }
 
 .block-container {
     padding: 1rem 2rem 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 .stMainBlockContainer {
-    min-height: calc(100vh - 2.25rem);
+    min-height: calc(100vh - 5.25rem);
     box-sizing: border-box;
 }
 
 .stMainBlockContainer > [data-testid="stVerticalBlock"] {
-    min-height: calc(100vh - 2.25rem);
+    min-height: calc(100vh - 5.25rem);
     display: flex;
     flex-direction: column;
 }
