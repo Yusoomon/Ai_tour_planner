@@ -8,6 +8,7 @@ def initialize_page(layout="wide"):
         layout=layout,
     )
     load_css()
+    header()
 
     defaults = {
         "user_profile": {},
