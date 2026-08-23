@@ -8,17 +8,20 @@ html, body{
     border-top: solid 1px #000000;
     color:var(--text-muted);
     background-color: var(--white);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    width: 100vw;
     height: 3rem;
     align-content: center;
     font-style: italic;
+    box-sizing: border-box;
+    margin-left: calc(50% - 50vw);
+}
+
+[data-testid="stDateInputField"]{
+    border: 1px solid var(--text-muted);
 }
 
 [data-testid="stMain"]{
-    margin-top:3.75rem;
+    margin-top:2.25rem;
 }
 
 :root {
@@ -33,7 +36,7 @@ html, body{
 }
 
 .main .block-container {
-    padding: 2rem;
+    padding: 1rem 2rem;
     max-width: 95%;
 }
 
@@ -128,13 +131,16 @@ div[data-testid="stButton"] button[data-testid="stBaseButton-secondary"] {
 div[data-testid="stButton"] button[kind="tertiary"] {
     width: auto;
     position: fixed;
-    top: 24px;
-    right: 20px;
+    top: 21px;
+    right: 25px;
     z-index: 1000000;
     padding: 0;
-    color: inherit;
-    font-size: 15px;
-    line-height: 1.2;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1;
+    min-height: 0;
+    height: 28px;
 }
 button {
     background-color: var(--white);
@@ -153,10 +159,30 @@ div[data-testid="stButton"] button[data-testid="stBaseButton-secondary"]:hover {
     color:#000000;
     background-color: #e0e0e0;
 }
+div[data-testid="stButton"] button[kind="tertiary"]:hover,
+div[data-testid="stButton"] button[data-testid="stBaseButton-tertiary"]:hover {
+    background-color: #bcbcbc;
+    border-radius: 20%;
+}
 
 .block-container {
-    padding: 1.5rem 3rem 3rem;
+    padding: 1rem 2rem 2rem;
     margin-bottom: 3rem;
+}
+
+.stMainBlockContainer {
+    min-height: calc(100vh - 2.25rem);
+    box-sizing: border-box;
+}
+
+.stMainBlockContainer > [data-testid="stVerticalBlock"] {
+    min-height: calc(100vh - 2.25rem);
+    display: flex;
+    flex-direction: column;
+}
+
+.stMainBlockContainer [data-testid="stElementContainer"]:has(.custom-footer) {
+    margin-top: auto;
 }
 .toolbar {
     align-items: center;
@@ -164,8 +190,8 @@ div[data-testid="stButton"] button[data-testid="stBaseButton-secondary"]:hover {
     border-bottom: 1px solid #e9e9e9;
     display: flex;
     justify-content: space-between;
-    margin: -1.5rem -3rem 0;
-    padding: 1rem 3rem;
+    margin: -1rem -2rem 0;
+    padding: 0.75rem 2rem;
 }
 .toolbar-title {
     color: #222222;

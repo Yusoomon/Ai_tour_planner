@@ -6,7 +6,7 @@ from folium import plugins
 from streamlit_folium import st_folium
 
 from api_pipeline.pipe import pipe
-from common import initialize_page
+from common import footer, initialize_page
 
 
 initialize_page()
@@ -277,3 +277,5 @@ if not st.session_state["user_profile"]:
     st.switch_page("pages/2_Profile.py")
 else:
     render()
+
+footer()

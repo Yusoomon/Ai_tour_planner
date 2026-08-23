@@ -1,6 +1,6 @@
 import streamlit as st
 
-from common import initialize_page
+from common import footer, initialize_page
 
 initialize_page(layout="centered")
 
@@ -49,3 +49,5 @@ with st.container():
 
     if st.button("Start Planning 👉", type="primary", use_container_width=True):
         st.switch_page("pages/2_Profile.py")
+
+footer()

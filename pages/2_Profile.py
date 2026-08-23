@@ -11,7 +11,7 @@ from google import genai
 from google.genai import types
 from dotenv import load_dotenv
 from streamlit_folium import st_folium
-from common import initialize_page
+from common import footer, initialize_page
 
 load_dotenv()
 initialize_page(layout="centered")
@@ -500,3 +500,5 @@ with content_area:
         ):
             st.session_state["profile_step"] = 2
             st.rerun()
+
+footer()

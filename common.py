@@ -9,7 +9,6 @@ def initialize_page(layout="wide"):
     )
     load_css()
     header()
-    footer()
 
     defaults = {
         "user_profile": {},
@@ -40,17 +39,17 @@ def header():
             top: 0;
             left: 0;
             width: 100%;
-            padding: 10px 20px;
+            padding: 6px 16px;
             display: flex;
             align-items: center;
             box-sizing: border-box;
             z-index: 999999;
         ">
             <a href="app.py" target="_self" class="brand">
-            <img src='https://cdn-icons-png.flaticon.com/512/201/201623.png' alt='Logo' style='height: 40px; margin-right: 15px;'>
-            <h1 style='margin: 0; font-size: 24px;'>AI Tour Planner</h1>
+            <img src='https://cdn-icons-png.flaticon.com/512/201/201623.png' alt='Logo' style='height: 30px; margin-right: 10px;'>
+            <h1 style='margin: 0; font-size: 20px;'>AI Tour Planner</h1>
             </a>
-            <span style='margin: 0 75px 0 auto; font-size: 15px; font-weight: 100;'>Free App</span>
+            <span style='margin: 0 60px 0 auto; font-size: 13px; font-weight: 100;'>Free App</span>
         </div>
         """, unsafe_allow_html=True,
     )
