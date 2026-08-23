@@ -15,16 +15,15 @@ html, body{
     font-size: 0.875rem;
     box-sizing: border-box;
     margin-left: calc(50% - 50vw);
-    margin-bottom: -1rem;
 }
 
 [data-testid="stDateInputField"]{
     border: 1px solid var(--text-muted);
 }
 
-[data-testid="stMain"]{
+[data-testid="stMain"]{ 
     margin-top:2.25rem;
-    height: calc(100vh - 32px);
+    height: calc(100vh - 36px);
     overflow-x: hidden;
 }
 
@@ -100,7 +99,7 @@ div[data-testid="stHeading"] h1 {
     font-weight: 100;
     text-align: center;
     white-space: nowrap;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 @media (max-width: 600px) {
@@ -165,7 +164,7 @@ div[data-testid="stButton"] button[data-testid="stBaseButton-tertiary"]:hover {
 }
 
 .block-container {
-    padding: 1rem 2rem 2rem;
+    padding: 0rem 2rem 2rem;
     margin-bottom: 1rem;
 }
 
@@ -219,7 +218,7 @@ div[data-testid="stButton"] button[data-testid="stBaseButton-tertiary"]:hover {
     font-size: 0.72rem;
     font-weight: 800;
     letter-spacing: 0.12rem;
-    margin: 1rem auto 0.7rem;
+    margin: -2rem auto 0.7rem;
     text-align: center;
 }
 .profile-progress::after {
