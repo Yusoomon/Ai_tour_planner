@@ -1,5 +1,6 @@
 streamlit
-google-generativeai
 folium
 streamlit-folium
 python-dotenv
+requests
+google-genai
