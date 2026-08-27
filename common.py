@@ -1,4 +1,5 @@
 import streamlit as st
+import base64
 
 
 def initialize_page(layout="wide"):
@@ -60,14 +61,20 @@ def footer():
     </div>
     """, unsafe_allow_html=True)
 
+@st.cache_data
+def _load_logo_base64():
+    with open("assets/yeohang_4_green_horizontal.png", "rb") as f:
+        return base64.b64encode(f.read()).decode()
+
 def header():
+    logo_b64 = _load_logo_base64()
     st.markdown(
-        """
-        <div class="app-header" style="
+        f"""
+        <div class ="app-header" style="
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
+            width:100%;
             padding: 6px 16px;
             display: flex;
             align-items: center;
@@ -76,8 +83,7 @@ def header():
             z-index: 999999;
         ">
             <a href="app.py" target="_self" class="brand">
-            <img src='https://cdn-icons-png.flaticon.com/512/201/201623.png' alt='Logo' style='height: 30px; margin-right: 10px;'>
-            <h1 style='margin: 0; font-size: 20px;'>AI Tour Planner</h1>
+            <img src='data:image/png;base64,{logo_b64}' alt='Yeohang Logo' style='height: 32px; margin-right: 10px;'>
             </a>
             <span style='margin: 0 80px 0 auto; font-size: 13px; font-weight: 100;'>Free App</span>
         </div>
