@@ -11,7 +11,7 @@ st.markdown(
     }
     </style>
     <div class="scroll-footer">
-        © 2026 Yusoomon, All rights reserved. Designed by MinHyeok
+        © 2026 Yusoomon, All rights reserved. Designed by Minhyuk
     </div>
     """,
     unsafe_allow_html=True
