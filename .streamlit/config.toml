@@ -8,6 +8,7 @@ font="verdana"
 [server]
 port=8501
 headless=true
+enableStaticServing=true
 
 [client]
 showSidebarNavigation=false

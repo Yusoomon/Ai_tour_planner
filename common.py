@@ -1,11 +1,9 @@
 import streamlit as st
-import base64
-
 
 def initialize_page(layout="wide"):
     st.set_page_config(
         page_title="AI Travel Planner",
-        page_icon="✈️",
+        page_icon="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/2708.png",
         layout=layout,
     )
     load_css()
@@ -61,13 +59,7 @@ def footer():
     </div>
     """, unsafe_allow_html=True)
 
-@st.cache_data
-def _load_logo_base64():
-    with open("assets/yeohang_4_green_horizontal.png", "rb") as f:
-        return base64.b64encode(f.read()).decode()
-
 def header():
-    logo_b64 = _load_logo_base64()
     st.markdown(
         f"""
         <div class ="app-header" style="
@@ -82,9 +74,8 @@ def header():
             height: 3rem;
             z-index: 999999;
         ">
-            <a href="app.py" target="_self" class="brand">
-            <img src='data:image/png;base64,{logo_b64}' alt='Yeohang Logo' style='height: 32px; margin-right: 10px;'>
-            </a>
+            <img src='app/static/images/yeohang_2_green_stacked.png' alt='Logo' style='height: 2.5rem; margin-right: 10px;'>
+            <h1 style='margin: 0; font-size: 20px;'>Kompass</h1>
             <span style='margin: 0 80px 0 auto; font-size: 13px; font-weight: 100;'>Free App</span>
         </div>
         """, unsafe_allow_html=True,

@@ -138,7 +138,7 @@ div[data-testid="stButton"] button[kind="tertiary"] {
     right: 25px;
     z-index: 1000000;
     min-height: 0;
-    margin-top: 0.75rem;
+    margin-top: 0.9rem;
 }
 button {
     background-color: var(--white);
