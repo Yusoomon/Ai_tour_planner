@@ -1,18 +1,54 @@
-st.markdown(
-    """
-    <style>
-    .scroll-footer {
-        text-align: center;
-        padding: 10px 0 20px 0;
-        color: #888888;
-        font-size: 13px;
-        border-top: 1px solid #e6e6e6;
-        margin-top: 50px;
-    }
-    </style>
-    <div class="scroll-footer">
-        © 2026 Yusoomon, All rights reserved. Designed by Minhyuk
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+# ✈️ KOMPASS (AI Tour Planner)
+> **AI personalized tour Itinerary builder for the best-optimized routes
+
+<p align="center">
+    <img src="static/images/yeohang_2_green_stacked.png" alt="LOGO" width="180"/>
+</p>
+
+![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+
+---
+
+## Overview
+**KOMPASS** was built by the tired developer who loves to tour but not to plan. It must be the best option if you are an eagle person to seek for the personalized best-fit route!
+
+---
+
+## Key Features
+- **User Data Collection**: 
+- **Prototype Suggestion before Finalization**: 
+- **Straight forward UI**: 
+- **API Integration**:
+
+---
+
+## Tech Stack
+
+| Type | Stacks |
+| **Frontend / Web Framework** | Python, Streamlit, CSS |
+| **AI / API** | Google Gemini API, Korea Data Portal API |
+| **Data & Image** | Folium |
+| **Deployment** | Streamlit Community Cloud |
+
+---
+
+## Directory Structure
+
+```text
+Ai_tour_planner/
+├── .streamlit/
+│   └── config.toml          # Streamlit background setting
+├── assets/
+│   └── style.css            # Main style
+├── pages/                   # Initial/Pages
+│   └── _init_.py
+│   └── 2_Profile.py
+│   └── 3_Itinerary.py
+├── static/
+│   └── images/
+│       └── logo.png         # Logo
+├── app.py                   # Main Launcher
+├── common.py                # Common template (header, footer, etc)
+├── README.md                # Overview
+└── requirements.txt         # Required packages
