@@ -55,7 +55,7 @@ def footer():
     st.markdown(
     """
     <div class="custom-footer">
-        © 2026 Yusoomon, All rights reserved. Designed by MinHyeok
+        © 2026 Yusoomon, All rights reserved. Designed by Minhyuk
     </div>
     """, unsafe_allow_html=True)
 
@@ -74,8 +74,7 @@ def header():
             height: 3rem;
             z-index: 999999;
         ">
-            <img src='app/static/images/yeohang_2_green_stacked.png' alt='Logo' style='height: 2.5rem; margin-right: 10px;'>
-            <h1 style='margin: 0; font-size: 20px;'>Kompass</h1>
+            <img src='app/static/images/KOMPASS_LOGO.png' alt='Logo' style='height: 2.5rem; margin-right: 10px;'>
             <span style='margin: 0 80px 0 auto; font-size: 13px; font-weight: 100;'>Free App</span>
         </div>
         """, unsafe_allow_html=True,
