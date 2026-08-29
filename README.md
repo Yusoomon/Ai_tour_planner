@@ -2,7 +2,7 @@
 > **AI personalized tour Itinerary builder for the best-optimized routes
 
 <p align="center">
-    <img src="static/images/yeohang_2_green_stacked.png" alt="LOGO" width="180"/>
+    <img src="static/images/KOMPASS_LOGO.png" alt="LOGO" width="180"/>
 </p>
 
 ![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)
